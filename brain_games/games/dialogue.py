@@ -20,7 +20,11 @@ def start_gcd_game():
     print("Find the greatest common divisor of given numbers.")
 
 
-def checking_answer(answer, name: str, check_answer: bool, correct_answer) -> bool:
+def start_progression_game():
+    print("What number is missing in the progression?")
+
+
+def checking_answer(answer, name, check_answer, correct_answer):
     if check_answer:
         print("Correct!")
         return True

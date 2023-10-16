@@ -1,4 +1,6 @@
 # Training project
+project demostration brain-progression: [here](https://asciinema.org/a/lTyWVFX8RN0xDsdndVg2kgkeO)
+
 project demonstration brain-even: [here](https://asciinema.org/a/rZiHS72ZGewT6UtL03NsQWmWz)
 
 project demonstration brain-calc: [here](https://asciinema.org/a/YkTzLo95nPuunW6c5fgvEcR9j)
