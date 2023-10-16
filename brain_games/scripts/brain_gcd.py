@@ -2,7 +2,8 @@ import prompt
 
 
 from brain_games.games import dialogue
-from brain_games.games.operations import correct_answer_gcd, check_gcd, generate_number, ATTEMPTS
+from brain_games.games.operations import (correct_answer_gcd, check_gcd,
+                                          generate_number, ATTEMPTS)
 
 
 def main():

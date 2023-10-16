@@ -4,7 +4,8 @@ import prompt
 
 import brain_games.games.operations
 from brain_games.games import dialogue
-from brain_games.games.operations import correct_answer_calc, check_calc, generate_number, ATTEMPTS
+from brain_games.games.operations import (correct_answer_calc, check_calc,
+                                          generate_number, ATTEMPTS)
 
 
 def main():
@@ -18,8 +19,13 @@ def main():
         answer = prompt.integer('Your answer: ')
         if not dialogue.checking_answer(answer,
                                         name,
-                                        check_calc(number1, number2, operation, answer),
-                                        correct_answer_calc(number1, number2, operation)):
+                                        check_calc(number1,
+                                                   number2,
+                                                   operation,
+                                                   answer),
+                                        correct_answer_calc(number1,
+                                                            number2,
+                                                            operation)):
             break
         if i == 2:
             print(f"Congratulations, {name}!")

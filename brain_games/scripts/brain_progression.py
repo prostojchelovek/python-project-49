@@ -18,7 +18,8 @@ def main():
 
         if not dialogue.checking_answer(answer,
                                         name,
-                                        check_progression_element(element, answer),
+                                        check_progression_element(element,
+                                                                  answer),
                                         element):
             break
         if i == 2:
