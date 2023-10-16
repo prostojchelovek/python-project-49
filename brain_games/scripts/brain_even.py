@@ -14,7 +14,7 @@ def main():
         number = even.number_generation()
         print(f"Question: {number}")
         answer = prompt.string('Your answer: ')
-        if not dialogue.checking_answer(number, answer, name, even.check(number, answer)):
+        if not dialogue.checking_answer(answer, name, even.check(number, answer), even.correct_answer(number)):
             break
         if i == 2:
             print(f"Congratulations, {name}!")
