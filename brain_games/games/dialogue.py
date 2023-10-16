@@ -1,5 +1,5 @@
 import prompt
-import brain_games.even
+import brain_games.games.even
 
 
 def welcome_user():
@@ -14,12 +14,13 @@ def start_even_game():
 
 
 def checking_answer(name: str):
-    number = brain_games.even.number_generation()
+    number = brain_games.games.even.number_generation()
     print(f"Question: {number}")
     answer = prompt.string('Your answer: ')
-    if brain_games.even.check(number, answer):
+    if brain_games.games.even.check(number, answer):
         print("Correct!")
         return True
     else:
-        print(f"'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {name}!")
+        print(f"'{answer}' is wrong answer ;(. Correct answer was '{brain_games.games.even.correct_answer(number)}'.")
+        print(f"Let's try again, {name}!")
         return False
