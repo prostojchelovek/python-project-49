@@ -16,6 +16,10 @@ def start_calc_game():
     print("What is the result of the expression?")
 
 
+def start_gcd_game():
+    print("Find the greatest common divisor of given numbers.")
+
+
 def checking_answer(answer, name: str, check_answer: bool, correct_answer) -> bool:
     if check_answer:
         print("Correct!")
