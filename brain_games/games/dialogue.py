@@ -12,6 +12,10 @@ def start_even_game():
     print("Answer \"yes\" if the number is even, otherwise answer \"no\".")
 
 
+def start_prime_game():
+    print("Answer \"yes\" if given number is prime. Otherwise answer \"no\".")
+
+
 def start_calc_game():
     print("What is the result of the expression?")
 

@@ -14,19 +14,16 @@ ops = {
 def check_even(number, answer):
     if correct_answer_even(number) == answer:
         return True
-    return False
 
 
 def check_calc(number1, number2, operation, answer):
     if correct_answer_calc(number1, number2, operation) == answer:
         return True
-    return False
 
 
 def check_gcd(number1, number2, answer):
     if correct_answer_gcd(number1, number2) == answer:
         return True
-    return False
 
 
 def check_progression_element(element, answer):
@@ -80,3 +77,15 @@ def progression_generation():
 
 def correct_answer_calc(number1, number2, operation):
     return ops[operation](number1, number2)
+
+
+def is_prime_number(number):
+    length = number / 2
+    dividers = 0
+    for i in range(1, length):
+        if number % i == 0:
+            dividers += 1
+
+    if dividers == 1:
+        return True
+
