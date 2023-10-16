@@ -1,5 +1,4 @@
 import prompt
-from brain_games.games import even
 
 
 def welcome_user():
@@ -11,6 +10,10 @@ def welcome_user():
 
 def start_even_game():
     print("Answer \"yes\" if the number is even, otherwise answer \"no\".")
+
+
+def start_calc_game():
+    print("What is the result of the expression?")
 
 
 def checking_answer(answer, name: str, check_answer: bool, correct_answer) -> bool:
