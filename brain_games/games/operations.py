@@ -16,6 +16,11 @@ def check_even(number, answer):
         return True
 
 
+def check_prime(number, answer):
+    if correct_answer_prime(number) == answer:
+        return True
+
+
 def check_calc(number1, number2, operation, answer):
     if correct_answer_calc(number1, number2, operation) == answer:
         return True
@@ -79,13 +84,20 @@ def correct_answer_calc(number1, number2, operation):
     return ops[operation](number1, number2)
 
 
+def correct_answer_prime(number):
+    if is_prime_number(number):
+        return 'yes'
+    else:
+        return 'no'
+
+
 def is_prime_number(number):
-    length = number / 2
+    length = number // 2
     dividers = 0
     for i in range(1, length):
         if number % i == 0:
             dividers += 1
 
-    if dividers == 1:
+    if (dividers == 1 or number in range(1, 4)) and number != 4:
         return True
 

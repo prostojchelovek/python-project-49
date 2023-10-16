@@ -1,4 +1,6 @@
 # Training project
+project demostration brain-prime: [here](https://asciinema.org/a/KjqCmai9PI9UurKozDfMyQGhM)
+
 project demostration brain-progression: [here](https://asciinema.org/a/lTyWVFX8RN0xDsdndVg2kgkeO)
 
 project demonstration brain-even: [here](https://asciinema.org/a/rZiHS72ZGewT6UtL03NsQWmWz)
