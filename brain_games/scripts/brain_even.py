@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-import brain_games.games.dialogue
-import brain_games.games.even
+from brain_games.games import dialogue
+from brain_games.games import even
 import prompt
 
 
@@ -8,13 +8,13 @@ ATTEMPTS = 3
 
 
 def main():
-    name = brain_games.games.dialogue.welcome_user()
-    brain_games.games.dialogue.start_even_game()
+    name = dialogue.welcome_user()
+    dialogue.start_even_game()
     for i in range(ATTEMPTS):
-        number = brain_games.games.even.number_generation()
+        number = even.number_generation()
         print(f"Question: {number}")
         answer = prompt.string('Your answer: ')
-        if not brain_games.games.dialogue.checking_answer(number, answer, name):
+        if not dialogue.checking_answer(number, answer, name, even.check(number, answer)):
             break
         if i == 2:
             print(f"Congratulations, {name}!")
