@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from brain_games.games import dialogue
-from brain_games.games.operations import correct_answer_prime, check_prime, generate_number, ATTEMPTS
+from brain_games.games.operations import (correct_answer_prime, check_prime,
+                                          generate_number, ATTEMPTS)
 import prompt
 
 

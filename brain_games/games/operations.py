@@ -100,4 +100,3 @@ def is_prime_number(number):
 
     if (dividers == 1 or number in range(1, 4)) and number != 4:
         return True
-
