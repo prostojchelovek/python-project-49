@@ -83,7 +83,9 @@ def correct_answer_prime(number):
 
 
 def is_prime_number(number):
-    for i in range(2, (number // 2) + 1):
-        if number % i == 0:
+    if number == 1:
+        return False
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0 or number == 1:
             return False
     return True
