@@ -1,5 +1,5 @@
 import random
-from settings import NUMBER_OF_ELEMENTS, OPS
+from brain_games.games.settings import NUMBER_OF_ELEMENTS, OPS
 
 
 def is_answer_even(number, answer):
