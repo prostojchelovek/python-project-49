@@ -1,7 +1,8 @@
 import prompt
 
 from brain_games.games import dialogue
-from brain_games.games.operations import (correct_answer_gcd, check_gcd,
+from brain_games.games.dialogue import is_right_answer
+from brain_games.games.operations import (correct_answer_gcd, is_answer_gcd,
                                           generate_number)
 from brain_games.games.settings import ATTEMPTS
 
@@ -14,10 +15,9 @@ def main():
         number2 = generate_number()
         print(f"Question: {number1} {number2}")
         answer = prompt.integer('Your answer: ')
-        if not dialogue.checking_answer(answer,
-                                        name,
-                                        check_gcd(number1, number2, answer),
-                                        correct_answer_gcd(number1, number2)):
+        answer_gcd = is_answer_gcd(number1, number2, answer)
+        correct_answer = correct_answer_gcd(number1, number2)
+        if not is_right_answer(answer, name, answer_gcd, correct_answer):
             break
         if i == 2:
             print(f"Congratulations, {name}!")

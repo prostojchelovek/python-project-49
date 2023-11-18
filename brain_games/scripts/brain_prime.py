@@ -2,7 +2,8 @@
 import prompt
 
 from brain_games.games import dialogue
-from brain_games.games.operations import (correct_answer_prime, check_prime,
+from brain_games.games.dialogue import is_right_answer
+from brain_games.games.operations import (correct_answer_prime, is_answer_prime,
                                           generate_number)
 from brain_games.games.settings import ATTEMPTS
 
@@ -14,10 +15,9 @@ def main():
         number = generate_number()
         print(f"Question: {number}")
         answer = prompt.string('Your answer: ')
-        if not dialogue.checking_answer(answer,
-                                        name,
-                                        check_prime(number, answer),
-                                        correct_answer_prime(number)):
+        answer_prime = is_answer_prime(number, answer)
+        correct_answer = correct_answer_prime(number)
+        if not is_right_answer(answer, name, answer_prime, correct_answer):
             break
         if i == 2:
             print(f"Congratulations, {name}!")

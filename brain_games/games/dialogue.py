@@ -28,8 +28,8 @@ def start_progression_game():
     print("What number is missing in the progression?")
 
 
-def checking_answer(answer, name, check_answer, correct_answer):
-    if check_answer:
+def is_right_answer(answer, name, user_response, correct_answer):
+    if user_response:
         print("Correct!")
         return True
     else:

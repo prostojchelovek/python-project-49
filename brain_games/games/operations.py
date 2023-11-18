@@ -2,27 +2,27 @@ import random
 from settings import NUMBER_OF_ELEMENTS, OPS
 
 
-def check_even(number, answer):
+def is_answer_even(number, answer):
     if correct_answer_even(number) == answer:
         return True
 
 
-def check_prime(number, answer):
+def is_answer_prime(number, answer):
     if correct_answer_prime(number) == answer:
         return True
 
 
-def check_calc(number1, number2, operation, answer):
+def is_answer_calc(number1, number2, operation, answer):
     if correct_answer_calc(number1, number2, operation) == answer:
         return True
 
 
-def check_gcd(number1, number2, answer):
+def is_answer_gcd(number1, number2, answer):
     if correct_answer_gcd(number1, number2) == answer:
         return True
 
 
-def check_progression_element(element, answer):
+def has_progression_element(element, answer):
     return element == answer
 
 
