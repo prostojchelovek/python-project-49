@@ -1,14 +1,5 @@
 import random
-import operator
-
-
-ATTEMPTS = 3
-NUMBER_OF_ELEMENTS = 10
-ops = {
-    '+': operator.add,
-    '-': operator.sub,
-    '*': operator.mul,
-}
+from settings import NUMBER_OF_ELEMENTS, OPS
 
 
 def check_even(number, answer):
@@ -81,7 +72,7 @@ def progression_generation():
 
 
 def correct_answer_calc(number1, number2, operation):
-    return ops[operation](number1, number2)
+    return OPS[operation](number1, number2)
 
 
 def correct_answer_prime(number):
@@ -92,11 +83,7 @@ def correct_answer_prime(number):
 
 
 def is_prime_number(number):
-    length = number // 2
-    dividers = 0
-    for i in range(1, length):
+    for i in range(2, (number // 2) + 1):
         if number % i == 0:
-            dividers += 1
-
-    if (dividers == 1 or number in range(1, 4)) and number != 4:
-        return True
+            return False
+    return True

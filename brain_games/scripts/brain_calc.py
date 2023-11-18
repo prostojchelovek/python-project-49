@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 import prompt
 
-
 import brain_games.games.operations
 from brain_games.games import dialogue
 from brain_games.games.operations import (correct_answer_calc, check_calc,
-                                          generate_number, ATTEMPTS)
+                                          generate_number)
+from brain_games.games.settings import ATTEMPTS
 
 
 def main():

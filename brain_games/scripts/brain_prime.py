@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
+import prompt
+
 from brain_games.games import dialogue
 from brain_games.games.operations import (correct_answer_prime, check_prime,
-                                          generate_number, ATTEMPTS)
-import prompt
+                                          generate_number)
+from brain_games.games.settings import ATTEMPTS
 
 
 def main():

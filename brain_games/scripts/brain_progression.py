@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
+import prompt
+
 from brain_games.games import dialogue
 from brain_games.games.operations import (progression_output,
                                           select_progression_element,
                                           progression_generation,
-                                          ATTEMPTS, check_progression_element)
-import prompt
+                                          check_progression_element)
+from brain_games.games.settings import ATTEMPTS
 
 
 def main():
